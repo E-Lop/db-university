@@ -1,0 +1,33 @@
+nome_tabella: departments
+id - TINYINT - PRIMARY KEY (NOTNULL, UNIQUE, AUTOINCREMENT, INDEX)
+dean - VARCHAR(30) - NOTNULL
+administrative_office_email - VARCHAR(30) - NOTNULL - UNIQUE - INDEX
+
+nome_tabella: degrees
+id - SMALLINT - PRIMARY KEY (NOTNULL, UNIQUE, AUTOINCREMENT, INDEX)
+name - VARCHAR(30) - NOTNULL
+duration - TINYINT - DEFAULT(3) NOTNULL
+description - TEXT - NULL
+
+nome_tabella: courses
+id - SMALLINT - PRIMARY KEY (NOTNULL, UNIQUE, AUTOINCREMENT, INDEX)
+name - VARCHAR(30) - NOTNULL
+credits - TINYINT - NOTNULL
+
+nome_tabella: teachers
+id - SMALLINT - PRIMARY KEY (NOTNULL, UNIQUE, AUTOINCREMENT, INDEX)
+name - VARCHAR(30) - NOTNULL
+email - VARCHAR(30) - NOTNULL UNIQUE - INDEX
+
+nome_tabella: students
+id - SMALLINT - PRIMARY KEY (NOTNULL, UNIQUE, AUTOINCREMENT, INDEX)
+name - VARCHAR(30) - NOTNULL
+email - VARCHAR(30) - NOTNULL
+serial_number - TINYINT - UNIQUE - INDEX
+average_mark - TINYINT
+is_in_prescribed_time - TINYINT
+
+nome_tabella: exams
+id - SMALLINT - PRIMARY KEY (NOTNULL, UNIQUE, AUTOINCREMENT, INDEX)
+session - VARCHAR(30)
+assistant_professors - VARCHAR(30)
